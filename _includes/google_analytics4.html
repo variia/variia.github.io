@@ -1,0 +1,11 @@
+<!-- Global site tag (gtag.js) - Google Analytics 4 from 01.07.2022 onwards -->
+{% if site.google_analytics4_tracking_id %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics4_tracking_id }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '{{ site.google_analytics4_tracking_id }}');
+  </script>
+{% endif %}
