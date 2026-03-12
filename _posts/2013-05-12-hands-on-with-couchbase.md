@@ -17,7 +17,7 @@ sharing: true
 footer: true
 ---
 It's been a long a long time coming, hard work has finally paid off and the last 7 months feels like just only few weeks.
-<a href="http://www.couchbase.com" target="_blank">Couchbase</a> is now our primary NoSQL (key-value) store for production
+<a href="https://www.couchbase.com" target="_blank">Couchbase</a> is now our primary NoSQL (key-value) store for production
 and we are impressed with the results. This article is about our hands-on experience, benchmarking results and its associated
 challenges.
 
@@ -25,7 +25,7 @@ challenges.
 
 We work in the online advertising market and for today's internet user speed is everything. Therefor, latency is paramount in
 our application design thus, we needed something fast to store various user information including targeting data.
-Few years ago, the choice was <a href="http://www.project-voldemort.com" target="_blank">Voldemort</a> for its latency and
+Few years ago, the choice was <a href="https://www.project-voldemort.com" target="_blank">Voldemort</a> for its latency and
 speed, but unfortunately the product was not only vulnerable to cluster changes and disasters, but also was featuring small
 user group so support was difficult. `memcached` always looked promising but the lack of clustering and disk persistence was
 _too expensive_ for our production suite.
@@ -60,13 +60,13 @@ do not seem to be affected by our application tests, so I started believing tha
 
 This went on for some time, even engaged the commercial support which was helpful to pinpoint potential issues in our setup, but we have not really
 got much difference in results and our team really exhausted all of its options at that point of time. Couple of months later we felt that it's time
-to look for something else and my team began looking at <a href="http://www.aerospike.com" target="_blank">AeroSpike</a> with the exception of me.
+to look for something else and my team began looking at <a href="https://www.aerospike.com" target="_blank">AeroSpike</a> with the exception of me.
 I simply refused to give up and was unable to accept failure.
 
 ## The Breakthrough
 
 Without much motivation I continued looking, and after so many hours of troubleshooting, Google searching I bumped into something promising we should
-have (perhaps) looked at much earlier, the <a href="http://http://www.couchbase.com/wiki/display/couchbase/Java+Load+Generator" target="_blank">Java Load Test Generator</a>
+have (perhaps) looked at much earlier, the <a href="https://www.couchbase.com/wiki/display/couchbase/Java+Load+Generator" target="_blank">Java Load Test Generator</a>
 from the community wiki. Disregarding our "sprint" plans, I grabbed a couple of developers along with the code and started a (somewhat) secret project
 to work on a "real load tester" application. The code was a bit hard to read but we managed to modify it so it worked with our keys from the pre-populated
 (160 million) data bucket not with some random generated garbage. We fired it from a single node and immediately managed to squeeze more juice out of the
@@ -82,11 +82,11 @@ and I am happy to say that it's in production now for a good couple of months wi
 
   * Extracted 2 million keys out of our production bucket into a flat file, the load test client read this file into memory during startup
   * Ensured that all of our buckets are 100% memory resident (in-memory store only), even with SSDs reading is just too costly for us
-  * Upgraded our cluster to version 1.8.1 and also patched it with <a href="http://support.couchbase.com/entries/21374979-TAP-disconnect-causes-memory-leak-in-1-8-x-MB-6550-" target="_blank">Hotfix MB-6550</a>
+  * Upgraded our cluster to version 1.8.1 and also patched it with <a href="https://support.couchbase.com/entries/21374979-TAP-disconnect-causes-memory-leak-in-1-8-x-MB-6550-" target="_blank">Hotfix MB-6550</a>
   * Vacuumed all of our persisted databases on disk (SQLite) to ensure maximum performance (our production data population, [write only]
     was constantly running during our benchmarks tests)
   * Copied the modified `ycsb.jar` along with the rest of the load test code to our NFS share
-  * Adjusted the JVM to use 1G Max Heap along with the <a href="http://www.couchbase.com/docs/couchbase-sdk-java-1.0/java-gc-tuning.html" target="_blank">recommended JVM options</a> however the difference was neglectable
+  * Adjusted the JVM to use 1G Max Heap along with the <a href="https://www.couchbase.com/docs/couchbase-sdk-java-1.0/java-gc-tuning.html" target="_blank">recommended JVM options</a> however the difference was neglectable
   * Executed the load test from 20 production application servers, all at once
 
 Test configuration:

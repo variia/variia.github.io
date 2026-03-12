@@ -16,7 +16,7 @@ comments: true
 sharing: true
 footer: true
 ---
-<a href="http://www.couchbase.com" target="_blank">Couchbase</a> 1.8 supports two types of buckets but the _memcached_ bucket is limited, does not
+<a href="https://www.couchbase.com" target="_blank">Couchbase</a> 1.8 supports two types of buckets but the _memcached_ bucket is limited, does not
 support persistence, failover so this article is about the _couchbase_ bucket type and its maintenance.
 
 We tend to forget the fact, that this bucket is persisted so every single key is saved to disk. This means you have a copy in memory (assume your
@@ -57,7 +57,7 @@ By early February we reached our target size, but our disk was still bloated and
 
 ## SQL Fragmentation
 
-Couchbase 1.8 uses SQLite3 to persist the data, it comes with the product installer package. The <a href="http://support.couchbase.com/entries/21724787-Understanding-SQLite-fragmentation-and-Vacuuming-of-databases" target="_blank">knowledgebase</a>
+Couchbase 1.8 uses SQLite3 to persist the data, it comes with the product installer package. The <a href="https://support.couchbase.com/entries/21724787-Understanding-SQLite-fragmentation-and-Vacuuming-of-databases" target="_blank">knowledgebase</a>
 (login required) from the support portal explains this very well although in real life scenario, I believe there is a little more to it.
 
 ## The not so Easy Way
@@ -72,7 +72,7 @@ When you initiate the _rebalance_ operation the entire Couchbase data area o
 on our small 4 node cluster it's 160 minutes and it's best case scenario. When fully utilized, this could go up as high as 12 hours just to clean our 4 node
 cluster and it's worth to mention that we have the fastest SSD available.
 The final important aspect of this method is that rebalance fails sometimes, there is a lot going on and it's somewhat _normal_ according to 
-<a href="http://blog.couchbase.com/top-10-things-ops-sys-admin-must-know-about-couchbase" target="_blank">another article</a>. When it does you have to start
+<a href="https://blog.couchbase.com/top-10-things-ops-sys-admin-must-know-about-couchbase" target="_blank">another article</a>. When it does you have to start
 the _rebalance_ all over again, and it could go on for some time until you get all your nodes cleaned. This is something we could not afford, it's just not
 feasible for 24/7 operations.
 
@@ -89,7 +89,7 @@ $ curl "http://localhost:8091/settings/autoFailover" -i -u Administrator:"yourpa
 ```
 
 followed by shutting the _coushbase-server_ process down. When your server process is stopped, you can then _VACUUM_ the database files individually as explained
-in the <a href="http://support.couchbase.com/entries/21724787-Understanding-SQLite-fragmentation-and-Vacuuming-of-databases" target="_blank">knowledgebase</a> article.
+in the <a href="https://support.couchbase.com/entries/21724787-Understanding-SQLite-fragmentation-and-Vacuuming-of-databases" target="_blank">knowledgebase</a> article.
 
 ## The Surprise
 
@@ -113,7 +113,7 @@ file system.
 Then we created a temporary folder at `/opt/temp` and mounted `/var/tmp` to it. This way we got enough space to complete the database _VACUUM_ and we moved this high
 IO operation to our fastest drive available.
 
-At completion, start the server process and <a href="http://www.couchbase.com/docs/couchbase-manual-1.8/couchbase-monitoring-startup.html" target="_blank">monitor</a>
+At completion, start the server process and <a href="https://www.couchbase.com/docs/couchbase-manual-1.8/couchbase-monitoring-startup.html" target="_blank">monitor</a>
 the warmup. This method was not only faster, but leaves 75% of our data intact and fast not to mention that we do not have to risk wasting time on _rebalance_ failures.
 At last but not least re-enable your _auto failover_ when all of your nodes are done:
 

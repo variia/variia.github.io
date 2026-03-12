@@ -42,7 +42,7 @@ tun1 Link encap:UNSPEC HWaddr 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00
 ```
 
 It seemed that the tunnel is not being able to keep up with the amount of traffic it received. After some reading, it turned out, that OpenVPN sets
-<a href="http://en.wikipedia.org/wiki/Ifconfig" target="_blank">txqueuelen</a> parameter to 100 as default for the tunnel interfaces on both, client and server. It is essentially
+<a href="https://en.wikipedia.org/wiki/Ifconfig" target="_blank">txqueuelen</a> parameter to 100 as default for the tunnel interfaces on both, client and server. It is essentially
 a buffer, and managed by the network scheduler.
 
 The solution was to set this to 1000, identical to the physical interface configurations:

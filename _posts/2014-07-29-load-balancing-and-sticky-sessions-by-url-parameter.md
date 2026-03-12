@@ -19,13 +19,13 @@ footer: true
 To be able to mimic our production workload in testing, we had to come with a low cost solution to load balance HTTP traffic between few application servers. In addition to
 that, for the first (initial request) we required even distribution amongst the backend nodes but, subsequent requests needed to be handled by the same backend server.
 
-This task was relatively easy with <a href="http://nginx.org" target="_blank">NGINX</a>, our preferred HTTP server however lately, I had to come up with a solution for
-<a href="http://www.apache.org" target="_blank">apache</a> 2.2 which was not as straight forward.
+This task was relatively easy with <a href="https://nginx.org" target="_blank">NGINX</a>, our preferred HTTP server however lately, I had to come up with a solution for
+<a href="https://www.apache.org" target="_blank">apache</a> 2.2 which was not as straight forward.
 
 ## Load Balancing and Sticky Sessions by URL Parameter
 
 apache maintains one of the best online documentation for most of its versions so finding a solution to my problem was not hard at all. However,
-<a href="http://httpd.apache.org/docs/2.2/mod/mod_proxy_balancer.html#example" target="_blank">most solutions are based on cookies</a> what I could not use. The issue with
+<a href="https://httpd.apache.org/docs/2.2/mod/mod_proxy_balancer.html#example" target="_blank">most solutions are based on cookies</a> what I could not use. The issue with
 cookies is that I have limited control over them, there is no guarantee that the user has cookies enabled, or it will be saved not to mention that cookies can become corrupted too.
 
 The other issue with cookie based load balancing is that once you have one set, you always ended up on the same backend server even when you make your _first request_.

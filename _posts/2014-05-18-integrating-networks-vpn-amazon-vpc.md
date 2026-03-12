@@ -34,7 +34,7 @@ desktop computers, mobile devices, it's more suitable for connecting networks ak
 
 #### Features and Benefits
 
-  1. Secure. In fact, it was not affected by the recently discovered <a href="http://heartbleed.com" target="_blank">Heartbleed</a> bug of OpenSSL as it's using
+  1. Secure. In fact, it was not affected by the recently discovered <a href="https://heartbleed.com" target="_blank">Heartbleed</a> bug of OpenSSL as it's using
      crypto built into the kernel.
   2. Supports dynamic route management with iBGP, suitable for corporate networks with lots of local LANs.
   3. Somewhat easy to implement, widely supported on many hardware platforms, appliances as well as open source software such as
@@ -60,7 +60,7 @@ While it does share some features with IPsec, there are a couple of special ones
 ![Diagram](/assets/img/2014-05/24F4919D-CEFE-48D3-A811-D6BBDC7D2CF9.png)
 
 I will not going into too much detail here, just share the important bits I encountered during my setup. The Amazon guide is well written, please read it for full understanding
-of the <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Scenario2.html" target="_blank">concept</a>.
+of the <a href="https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Scenario2.html" target="_blank">concept</a>.
 
   * Create a VPC with a preferably /16 mask. eg: `10.0.0.0/16` (Note: CIDR mask must be between /16 and /28)
   * Create at least 2 subnets that overlap with your the VPC CIDR mask, preferably /24. eg: `10.0.0.0/24`, `10.0.1.0/24`. One will be your private LAN with outgoing only Internet,

@@ -15,7 +15,7 @@ comments: true
 sharing: true
 footer: true
 ---
-I am a sysop / devops engineer, love open source and security so I tend to ignore commercial software. For password valet, I have been using <a href="http://keepass.info" target="_blank">KeePass </a>
+I am a sysop / devops engineer, love open source and security so I tend to ignore commercial software. For password valet, I have been using <a href="https://keepass.info" target="_blank">KeePass </a>
 for years and happy with it except a couple of things:
 
 * written in .NET so cross platform integration has its challenges
@@ -27,11 +27,11 @@ Although the browser integration is reasonably good now on Windows, it's not as
 ## Update - July 28th, 2014:
 
 I have to admit, that most of my concerns around 1Password were related to the earlier Windows version. Since my evaluation,
-<a href="http://blog.agilebits.com/2014/06/17/1password-4-for-windows-is-here/" target="_blank">1Password 4 was made available for Windows</a> and looks, feels, behaves exactly
+<a href="https://blog.agilebits.com/2014/06/17/1password-4-for-windows-is-here/" target="_blank">1Password 4 was made available for Windows</a> and looks, feels, behaves exactly
 like on OSX.
 
 I am very happy to say that, I made the switch and I am a satisfied 1Password customer ever since. In the end, I decided not to look at cost when it comes to security,
-and <a href="http://blog.agilebits.com/2014/07/16/1password-is-a-very-safe-basket/" target="_blank">it seems that I made the right decision.</a>
+and <a href="https://blog.agilebits.com/2014/07/16/1password-is-a-very-safe-basket/" target="_blank">it seems that I made the right decision.</a>
 
 ## Dashlane vs 1Password
 
@@ -80,7 +80,7 @@ software KeePass regarding functionality, security, design, look / feel and abov
   * design: love the application on OSX, similar to KeePass, easy to see details, password strength, etc. in a "detailed like" list view
   * main window: collapsible folder options, excellent organisation and tags, really nice looking interface
   * import: KeePass import allows "field" selection from the CSV export to mach 1Password fields which comes handy for complex entries
-  * security: <a href="http://blog.agilebits.com/2013/03/06/you-have-secrets-we-dont-why-our-data-format-is-public/" target="_blank">openly published security design</a>
+  * security: <a href="https://blog.agilebits.com/2013/03/06/you-have-secrets-we-dont-why-our-data-format-is-public/" target="_blank">openly published security design</a>
   * trusted: stable software from vendor with good reputation
   * support: great support and community forums
   * export: csv, text or its own .pif format
@@ -95,7 +95,7 @@ software KeePass regarding functionality, security, design, look / feel and abov
   * no auto login: no auto field population either, even a simple browser does that. I don't know why I have to hit "CMD+\" key combination to be able to populate fields and
     log in automatically.
   * no virtual keyboard: just some extra protection against key-loggers although not so much of a concern
-  * no 2 factor authentication: and <a href="http://blog.agilebits.com/2011/09/23/two-factor-or-not-two-factor/" target="_blank">it's not even planned</a>
+  * no 2 factor authentication: and <a href="https://blog.agilebits.com/2011/09/23/two-factor-or-not-two-factor/" target="_blank">it's not even planned</a>
   * browser plugins based on "websockets" and it can break things or requires specific settings on some platforms , Windows especially
   * apache authentication: incapable of filling / recognising apache like authentication popups
 
@@ -109,5 +109,5 @@ features/ annoying bits. I also need at least Windows and OSX support, which is 
 what grounds they can charge money for it.
 
 I have not evaluated <a href="https://www.lastpass.com" target="_blank">Lastpass</a> yet, at this stage I simply
-<a href="http://arstechnica.com/security/2014/07/severe-password-manager-attacks-steal-digital-keys-and-data-en-masse/" target="_blank">do not trust that product</a> and their security practices.
+<a href="https://arstechnica.com/security/2014/07/severe-password-manager-attacks-steal-digital-keys-and-data-en-masse/" target="_blank">do not trust that product</a> and their security practices.
 

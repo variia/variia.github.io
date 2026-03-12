@@ -15,7 +15,7 @@ comments: true
 sharing: true
 footer: true
 ---
-Merging or joining <a href="http://salt.readthedocs.org/en/latest/topics/pillar/" target="_blank">Pillars</a> in SaltStack is supported but somewhat limited. It took me some
+Merging or joining <a href="https://salt.readthedocs.org/en/latest/topics/pillar/" target="_blank">Pillars</a> in SaltStack is supported but somewhat limited. It took me some
 time to work out a clean solution to support a specific manipulation so to make this easier, I am going to share my real life example.
 
 ## Merging Pillars in SaltStack
@@ -123,7 +123,7 @@ include:
 
 This did not work as expected, actually it overrides either the first subkey of the `named.sls` (custom) or the zone file (zone) depending on which gets read first during compile.
 
-I could have used the <a href="http://salt.readthedocs.org/en/latest/topics/pillar/" target="_blank">include statement with the nesting </a>but it only works if I restructure
+I could have used the <a href="https://salt.readthedocs.org/en/latest/topics/pillar/" target="_blank">include statement with the nesting </a>but it only works if I restructure
 the zone files and remove nesting from the bind key as well as include one zone.
 
 One option was to move this logic into the `top.sls`:
@@ -141,7 +141,7 @@ Adding the if-else logic to the zone files looked not so ideal, changing the gra
 
 #### Template Engine to the Rescue
 
-My solution was hiding <a href="http://salt.readthedocs.org/en/latest/ref/renderers/all/salt.renderers.jinja.html" target="_blank">here</a>, I just had to compose the recipe
+My solution was hiding <a href="https://salt.readthedocs.org/en/latest/ref/renderers/all/salt.renderers.jinja.html" target="_blank">here</a>, I just had to compose the recipe
 myself. This method can be used in state files as well giving you the much needed power of code reuse.
 
 `/srv/salt/pillar/base/bind/init.sls`

@@ -16,12 +16,12 @@ comments: true
 sharing: true
 footer: true
 ---
-I purchased a <a href="http://www.seagate.com/external-hard-drives/home-entertainment/media-sharing-devices/seagate-central" target="_blank">Seagate Central</a> 2T NAS 5 months
+I purchased a <a href="https://www.seagate.com/external-hard-drives/home-entertainment/media-sharing-devices/seagate-central" target="_blank">Seagate Central</a> 2T NAS 5 months
 ago, for a low cost home media center solution. It worked reasonably well considering the low ~US130 cost although, I had ongoing issues with firmware updates, occasional drive
 performance, etc. Unfortunately, it failed last week and while I was looking for alternatives, I learnt that I was not the only one having problems with that device so I simply
 lost trust in Seagate forever.
 
-I returned the drive, and the store offered me the <a href="http://www.wdc.com/mycloud/" target="_blank">WD MyCloud</a> 2T as a replacement alternative without extra cost what
+I returned the drive, and the store offered me the <a href="https://www.wdc.com/mycloud/" target="_blank">WD MyCloud</a> 2T as a replacement alternative without extra cost what
 I happily accepted.
 
 ## WD MyCloud 2T NAS Review
@@ -90,7 +90,7 @@ Basically, you can set up another device and create a snapshot or mirror of your
 this is or how long it takes to copy 2T-4T over the cable even on Gbit network.
 
 Having the ability to clone one drive to another is not a bad idea and if you are looking for safety and value, it is cheaper to get 2 of these than one
-[MyCloud EX](http://www.wdc.com/mycloudex2/) with 2 disks. Although that would give you encryption support as well as continuos operation even when one of the drive fails
+[MyCloud EX](https://www.wdc.com/mycloudex2/) with 2 disks. Although that would give you encryption support as well as continuos operation even when one of the drive fails
 (assuming RAID1 setup).
 
 #### DLNA 1.5 and Twonky:
@@ -269,7 +269,7 @@ to your content while away, you will have to trust WD some ways.
 #### AFP performance:
 
 Bad news for OSX users, even listing a decent directory with few hundred files takes a long time. I could not be bothered too much about it,
-<a href="http://support.apple.com/kb/HT5884" target="_blank">OSX Mavericks now defaults to SMB</a> so Apple clearly signaled that it's moving away from its in-house developed protocol.
+<a href="https://support.apple.com/kb/HT5884" target="_blank">OSX Mavericks now defaults to SMB</a> so Apple clearly signaled that it's moving away from its in-house developed protocol.
 
 Using the device over SMB (cifs) is fine, although I have not upgraded to OSX Mavericks yet so my experience is based on OSX Mountain Lion 10.8.5.
 

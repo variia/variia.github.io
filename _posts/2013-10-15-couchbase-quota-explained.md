@@ -27,7 +27,7 @@ but this gets harder when you start utilising your cluster RAM.
 ![Quota](/assets/img/2013-10/CFDD97C6-310B-11E3-AD2F-001D095D855C.jpg)
 
 I had a solid understanding of the "mem\_low\_wat" and "mem\_high\_wat" watermarks, I just didn't know their impact and how their values are calculated.
-The <a href="http://www.couchbase.com/docs/couchbase-manual-2.0/couchbase-introduction-architecture-ejection-eviction.html" target="_blank">working set management guide</a>
+The <a href="https://www.couchbase.com/docs/couchbase-manual-2.0/couchbase-introduction-architecture-ejection-eviction.html" target="_blank">working set management guide</a>
 explains this, I am not going to repeat what is discussed in that, just reflect what happens in real life.
 
 In my case the default ratio (per bucket):

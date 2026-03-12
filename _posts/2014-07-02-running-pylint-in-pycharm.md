@@ -15,9 +15,9 @@ comments: true
 sharing: true
 footer: true
 ---
-I really liked the <a href="http://www.pylint.org" target="_blank">Pylint</a>integration in Eclipse/Pydev but I have switched to
-<a href="http://www.jetbrains.com/pycharm/" target="_blank">PyCharm</a> since JetBrains released CE edition. Pycharm supports
-<a href="http://legacy.python.org/dev/peps/pep-0008/" target="_blank">PEP8</a>auditing "out of the box", but I found out lately, that it is a little "loose" on style
+I really liked the <a href="https://www.pylint.org" target="_blank">Pylint</a>integration in Eclipse/Pydev but I have switched to
+<a href="https://www.jetbrains.com/pycharm/" target="_blank">PyCharm</a> since JetBrains released CE edition. Pycharm supports
+<a href="https://legacy.python.org/dev/peps/pep-0008/" target="_blank">PEP8</a>auditing "out of the box", but I found out lately, that it is a little "loose" on style
 compared to pylint. Running pylint in pycharm didn't seem to be supported in any ways so I became curious about how I could add this functionality to my favourite IDE.
 
 After some searching, I realised that there is not much out there about this topic. I could not accept it and went after the challenge...

@@ -19,8 +19,8 @@ footer: true
 We are an agile software development company and agile is great for "moving target". We plan, work and implement changes in small batches and ongoing re-factoring is just
 the nature of what we do.
 
-We recently added some functionality as well as increased traffic for one of our Java products utilising <a href="http://camel.apache.org" target="_blank">Apache Camel</a>
-and <a href="http://activemq.apache.org" target="_blank">ActiveMQ</a>. The product has been in production for years now, functioning with very much zero defect rate. Not soon
+We recently added some functionality as well as increased traffic for one of our Java products utilising <a href="https://camel.apache.org" target="_blank">Apache Camel</a>
+and <a href="https://activemq.apache.org" target="_blank">ActiveMQ</a>. The product has been in production for years now, functioning with very much zero defect rate. Not soon
 after deploying the new code, our monitoring system triggered alerts about unusually high TCP TIME_WAIT connection states on the server where the new code was running. We
 began the troubleshooting process and found they were all ActiveMQ connections to our broker. Our developers immediately confirmed that
 
@@ -39,11 +39,11 @@ Note: it's perfectly natural to have these especially on systems that deal with 
 the local TCP stack waits for twice the maximum segment lifetime (MSL) to pass (120 sec default) before it finishes CLOSING to be sure that the remote end-point received the
 acknowledgement (and was not queued on upstream routers). Normally it's harmless, although in large volume could cause memory overflow.
 
-We did have enough <a href="http://en.wikipedia.org/wiki/Ephemeral_port" target="_blank">ephemeral ports</a> to support 3.5K TIME_WAIT sockets, my issue was that it was an
+We did have enough <a href="https://en.wikipedia.org/wiki/Ephemeral_port" target="_blank">ephemeral ports</a> to support 3.5K TIME_WAIT sockets, my issue was that it was an
 extra ~1K and coming from my local network.
 
-While looking at our code, I spotted something interesting in our client implementation, we used <a href="http://activemq.apache.org/maven/apidocs/org/apache/activemq/spring/ActiveMQConnectionFactory.html" target="_blank"><em>ActiveMQConnectionFactory</em></a>
-instead of <a href="http://activemq.apache.org/maven/apidocs/org/apache/activemq/pool/PooledConnectionFactory.html" target="_blank">PooledConnectionFactory</a>. Although our
+While looking at our code, I spotted something interesting in our client implementation, we used <a href="https://activemq.apache.org/maven/apidocs/org/apache/activemq/spring/ActiveMQConnectionFactory.html" target="_blank"><em>ActiveMQConnectionFactory</em></a>
+instead of <a href="https://activemq.apache.org/maven/apidocs/org/apache/activemq/pool/PooledConnectionFactory.html" target="_blank">PooledConnectionFactory</a>. Although our
 application was functioning, large volume of asynchronous messages created overhead around socket maintenance on server what we don't need. After replacing our code to use
 PooledConnectionFactory, we loaded the application into our test environment to confirm the affect.
 
