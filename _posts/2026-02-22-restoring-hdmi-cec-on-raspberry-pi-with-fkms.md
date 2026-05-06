@@ -27,7 +27,7 @@ Bookworm with FKMS.
 The packages are available as an APT repository hosted on this domain, so installation is a few commands:
 
 ```bash
-echo "deb [trusted=yes] https://ivanvari.com/rpi-libcec-fkms/repo bookworm main" \
+echo "deb [trusted=yes arch=arm64] https://ivanvari.com/rpi-libcec-fkms/repo bookworm main" \
   | sudo tee /etc/apt/sources.list.d/rpi-libcec-fkms.list
 sudo apt-get update
 sudo apt-get install libcec6 cec-utils
